@@ -22,7 +22,7 @@ public class Control {
         this.g.addPlayer(p);
         System.out.println("CONTROL ACTIVE: for SWING");
     }
-
+    
 
     public void launch(){
     
@@ -89,6 +89,9 @@ public class Control {
         return "" + getLocation(x, y).getMatchTerrain(null);
         //throw new UnsupportedOperationException("Unimplemented method 'checkConnected'");
     }
+
+
+
 
     public String[][] getWallsStrings() {
         Location ls[][] = ((World)g.getState()).getMap();

@@ -78,6 +78,56 @@ public class Game {
     public int getTurn(){
         return this.turn;
     }
+    public boolean checkWin(Player checkPlayer, int turns, State state){
+        if ()
+        if (checkLines(checkPlayer, state, true)) return true; 
+        if (checkLines(checkPlayer, state, false)) return true; 
+        if (checkDiags(checkPlayer, state, true)) return true; 
+        return checkDiags(checkPlayer, state, false);
+    }
 
+    public boolean checkTie(int turns, State state){
+        if (int turns )
+    }
+    public boolean checkLines(Player checkPlayer, State state, boolean flip){
+        boolean check = true;
+        char checkedTile;
+        char[][] s = state.getIt();
+        char playerChar = checkPlayer.getChar();
+        for(int y = 0; y < s.length; y++){
+            check = true;
+            for(int x = 0; x < s[0].length; y++){
+                if (flip){
+                    checkedTile = s[y][x];
+                } else {
+                    checkedTile = s[x][y];
+                }
+                if (checkedTile == playerChar){
+                    check = false;
+                }
+            }
+            if (check){
+                return true;
+            }
+        }
+        return false;
+    }
+    public boolean checkDiags(Player checkPlayer, State state, boolean flip){
+        boolean check = true;
+        char checkedTile;
+        char[][] s = state.getIt();
+        char playerChar = checkPlayer.getChar();
 
+        for(int i = 0; i < s.length; i++){
+            if (flip){
+                checkedTile = s[i][i];
+            } else {
+                checkedTile = s[(s.length-1)-i][i];
+            }
+            if (checkedTile == playerChar){
+                check = false;
+            }
+        }
+        return check;
+    }
 }

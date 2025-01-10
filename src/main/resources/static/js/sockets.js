@@ -40,6 +40,6 @@ const buttons = document.getElementById("board").querySelectorAll("button");
 
 for(let b of buttons){
     b.addEventListener("click",function(e){
-        alert(this);
+       // alert();
     });
 }
