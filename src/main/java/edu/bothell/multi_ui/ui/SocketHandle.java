@@ -54,7 +54,9 @@ public class SocketHandle extends TextWebSocketHandler {
         Transit sharedState = new Transit(
             c.getState().getIt(), 
             c.getActive().getChar(), 
-            c.getTerrainStrings()
+            c.getTerrainStrings(),
+            c.getOver(),
+            c.getTurns()
         );        
 
         // Convert the shared state to JSON

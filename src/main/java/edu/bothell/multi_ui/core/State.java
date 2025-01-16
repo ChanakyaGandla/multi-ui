@@ -6,7 +6,7 @@ import java.util.Arrays;
 
 
 public class State implements Statable<int[]> {
-    public final char[][]   S = new char[5][5];
+    public final char[][]  S = new char[3][3];
     /*[][]//[64][96];
     {
         {' ',' ',' ',' ',' ',' '},

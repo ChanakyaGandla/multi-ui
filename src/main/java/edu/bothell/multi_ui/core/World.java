@@ -38,7 +38,7 @@ public class World extends State {
             }
         }
 
-        Location location = map[3][3];
+        Location location = map[0][0];
         location.setTerrain(Terrain.CITY);
 
         Crawler terriformer = new Crawler(this);

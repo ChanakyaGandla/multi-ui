@@ -32,6 +32,11 @@ public class Control {
         return this.g.getState();
     }
 
+    public boolean getOver(){
+        return this.g.ge
+    }
+
+
     // pos[0] is X
     public char update(int[] pos, String sId) {
         return g.play(pos, sId);

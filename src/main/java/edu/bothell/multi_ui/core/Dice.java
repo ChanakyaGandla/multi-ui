@@ -14,6 +14,13 @@ public class Dice {
     }
     // methods -------------------
 
+    public int compareBooleans(int booleanNum){
+        boolean[] bools = new boolean[booleanNum];
+        for(int y = 0; y > booleanNum; y++){
+            for(int x = y; x > booleanNum; x++){
 
-
+            }
+        }
+        return 1;
+    }  
 }

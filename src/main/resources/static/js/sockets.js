@@ -8,7 +8,7 @@ socket.onopen = () => {
 socket.onmessage = (event) => {
     console.log(event.data);
     var d = JSON.parse(event.data);
-    redrawBoard(d.s, d.t);
+    redrawBoard(d.s, d.t, d.over, d.turns);
     redrawPlayer(d.a);
 };
 
@@ -24,9 +24,12 @@ const redrawPlayer = function(d){
     p.className   = "c"+d;
 }
 
-const redrawBoard = function(d,t){
+const redrawBoard = function(d,t,over, turns){
+    alert(turns);
     const b  = document.getElementById("board");
     const rows  = b.querySelectorAll("div");
+
+
     for(let y = 0; y < rows.length; y++){
         const row = rows[y].querySelectorAll("button");
         for(let x = 0; x < row.length; x++ ){
